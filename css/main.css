@@ -580,19 +580,19 @@ body {
 }
 
 .main #card .card .list li .left .dog1 {
-  background-image: url("/img/Skye-small.jpg");
+  background-image: url("../img/Skye-small.jpg");
 }
 
 .main #card .card .list li .left .dog2 {
-  background-image: url("/img/dog2-small.jpg");
+  background-image: url("../img/dog2-small.jpg");
 }
 
 .main #card .card .list li .left .dog3 {
-  background-image: url("/img/dog3-small.jpg");
+  background-image: url("../img/dog3-small.jpg");
 }
 
 .main #card .card .list li .left .dog4 {
-  background-image: url("/img/dog4-small.jpg");
+  background-image: url("../img/dog4-small.jpg");
 }
 
 .main #card .card .list li .more {
