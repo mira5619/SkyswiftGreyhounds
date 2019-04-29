@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#3d1853" />
+    <title>News</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div id="bg"></div>
+    <header class="header">
+      <div class="toggler">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="logo">
+        <div class="brand">
+          <p class="hart">
+            <!-- <img src="img/hartRed.svg" /> -->
+          </p>
+          <p class="text">
+            <a href="index.html">
+              <span class="top"
+                ><img src="img/hartRed.svg"/>Skyswift<img
+                  src="img/paw-small.png"
+              /></span>
+              <span class="bottom">Greyhounds</span>
+            </a>
+          </p>
+        </div>
+      </div>
+      <nav class="nav">
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="news.html">News</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="letters">
+        <div id="output"></div>
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+      $(function() {
+        var url =
+          "https://script.google.com/macros/s/AKfycbxLhnmA3x6wvTIAiAGibbGzhOFVw5LEa9O_66oJml7BDox7vL6y/exec";
+        $.getJSON(url, function(data) {
+          console.log(data);
+
+          var html = "<h3>Latest News from us:</h3><ol>";
+          $.each(data, function(key, val) {
+            console.log(key);
+            console.log("VAL:", val);
+            html += "<li> ";
+            for (var x = 0; x < val.length; x++) {
+              console.log(val[x]);
+              html += val[x] + "<br> ";
+            }
+            html += "</li><hr> ";
+          });
+          html += "</ol>";
+          $("#output").html(html);
+        });
+      });
+    </script>
+  </body>
+</html>

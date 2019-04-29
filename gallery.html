@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#3d1853" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div id="bg"></div>
+    <header class="header">
+      <div class="toggler">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="logo">
+        <div class="brand">
+          <p class="hart">
+            <!-- <img src="img/hartRed.svg" /> -->
+          </p>
+          <p class="text">
+            <a href="index.html">
+              <span class="top"
+                ><img src="img/hartRed.svg"/>Skyswift<img
+                  src="img/paw-small.png"
+              /></span>
+              <span class="bottom">Greyhounds</span>
+            </a>
+          </p>
+        </div>
+      </div>
+      <nav class="nav">
+        <ul class="links">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li><a href="gallery.html">Gallery</a></li>
+
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="news.html">News</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="options">
+        <label for="dog-select">Choose a dog:</label>
+
+        <select id="select-dog">
+          <option value="">--Please choose a dog--</option>
+          <option value="Skye">Skye</option>
+          <option value="Ollie">Ollie</option>
+          <option value="Nigel">Nigel</option>
+          <option value="Jacc's">Jacc's</option>
+        </select>
+      </div>
+
+      <div class="content">
+        <div id="clickedImg"></div>
+        <div id="images">
+          <p>click on image to display it</p>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

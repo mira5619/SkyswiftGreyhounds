@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#3d1853" />
+    <title>Skyswift Greyhounds</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div id="bg"></div>
+    <header class="header">
+      <div class="toggler">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="logo">
+        <div class="brand">
+          <p class="hart"></p>
+          <p class="text">
+            <a href="index.html">
+              <span class="top"
+                ><img src="img/hartRed.svg"/>Skyswift<img
+                  src="img/paw-small.png"
+              /></span>
+              <span class="bottom">Greyhounds</span>
+            </a>
+          </p>
+        </div>
+      </div>
+      <nav class="nav">
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="news.html">News</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section id="primary">
+        <h1 class="contact">
+          Please leave us your contact details and we will get back to you
+        </h1>
+      </section>
+      <section id="card">
+        <h3>Fill in the form.</h3>
+        <p class="ani">&darr;</p>
+        <div class="card">
+          <form id="myForm" class="contact-form">
+            <div class="form-row">
+              <label for="full-name">Name:</label>
+              <input
+                id="full-name"
+                name="Name"
+                type="text"
+                placeholder="full name"
+              />
+            </div>
+            <!-- email input field -->
+            <div class="form-row">
+              <label for="email">Email:</label>
+              <input
+                id="email"
+                name="Email"
+                type="email"
+                placeholder="joe@example.com"
+              />
+            </div>
+            <div class="form-row">
+              <label for="tel">Phone:</label>
+              <input id="tel" name="Phone" type="text" placeholder="tel." />
+            </div>
+            <div class="form-row">
+              <label for="comment">Comment:</label>
+              <textarea id="comment" name="Comment"></textarea>
+            </div>
+            <div class="form-row">
+              <button type="submit" id="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(function() {
+        $("#myForm").submit(function(e) {
+          console.log($("#myForm").val);
+          e.preventDefault();
+          var myData = $("form#myForm :input").serialize();
+          var url =
+            "https://script.google.com/macros/s/AKfycbwq3PRg_94_yjJgvLKu-jP4DCyTJhhaTpyrsfgbZbwrYPcPU7E/exec";
+          console.log(myData);
+          $.ajax({
+            url: url,
+            method: "POST",
+            data: myData,
+            success: function(data) {
+              //console.log(data);
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
