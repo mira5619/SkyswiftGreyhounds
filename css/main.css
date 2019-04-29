@@ -696,7 +696,7 @@ body {
 .main #dogPic .card .imgBox-dog1 {
   width: 100%;
   height: 20rem;
-  background-image: url("/img/Skye.jpg");
+  background-image: url("../img/Skye.jpg");
   background-size: cover;
   background-position: center;
 }
