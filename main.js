@@ -5,16 +5,16 @@ toggler.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
 
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollpos = window.pageYOffset;
-  if (prevScrollpos > currentScrollpos) {
-    document.querySelector("header").style.top = "0";
-  } else {
-    document.querySelector("header").style.top = "-100px";
-  }
-  prevScrollpos = currentScrollpos;
-};
+// var prevScrollpos = window.pageYOffset;
+// window.onscroll = function() {
+//   var currentScrollpos = window.pageYOffset;
+//   if (prevScrollpos > currentScrollpos) {
+//     document.querySelector("header").style.top = "0";
+//   } else {
+//     document.querySelector("header").style.top = "-100px";
+//   }
+//   prevScrollpos = currentScrollpos;
+// };
 
 let myPicturesArray = [
   {
