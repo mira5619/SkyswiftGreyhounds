@@ -39,6 +39,43 @@ body {
   }
 }
 
+#bg .doggy {
+  width: 80px;
+  height: 70px;
+  position: absolute;
+  right: 180px;
+  top: 80px;
+}
+
+#bg .doggy .e,
+#bg .doggy .b,
+#bg .doggy .a {
+  -webkit-animation: 0.7s shake linear 1s both;
+          animation: 0.7s shake linear 1s both;
+}
+
+#bg .bone {
+  width: 30px;
+  position: absolute;
+  right: 150px;
+  top: 140px;
+}
+
+#bg .bone1 {
+  -webkit-transform: rotate(9deg) scale(0.8);
+          transform: rotate(9deg) scale(0.8);
+  -webkit-animation: 0.7s drop cubic-bezier(0.86, 0, 0.07, 1) 0.4s both;
+          animation: 0.7s drop cubic-bezier(0.86, 0, 0.07, 1) 0.4s both;
+}
+
+#bg .bone2 {
+  right: 138px;
+  -webkit-transform: rotate(-25deg);
+          transform: rotate(-25deg);
+  -webkit-animation: 1s drop cubic-bezier(0.86, 0, 0.07, 1) 0.4s both;
+          animation: 1s drop cubic-bezier(0.86, 0, 0.07, 1) 0.4s both;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -519,10 +556,16 @@ body {
   cursor: pointer;
   -webkit-transition: all 1s;
   transition: all 1s;
+  outline: none;
 }
 
 .main #card .card .contact-form .form-row button:hover {
   background: #3c8859;
+}
+
+.main #card .card .contact-form .form-row button .heart {
+  color: red;
+  padding-right: 0.5em;
 }
 
 .main #card .card .list {
@@ -718,6 +761,46 @@ body {
   to {
     -webkit-transform: translateY(5px);
             transform: translateY(5px);
+  }
+}
+
+@-webkit-keyframes drop {
+  0% {
+    top: -80px;
+  }
+  100% {
+    top: 140px;
+  }
+}
+
+@keyframes drop {
+  0% {
+    top: -80px;
+  }
+  100% {
+    top: 140px;
+  }
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: translate(35px, 5px);
+            transform: translate(35px, 5px);
+  }
+  100% {
+    -webkit-transform: translate(5px, 15px);
+            transform: translate(5px, 15px);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: translate(35px, 5px);
+            transform: translate(35px, 5px);
+  }
+  100% {
+    -webkit-transform: translate(5px, 15px);
+            transform: translate(5px, 15px);
   }
 }
 
