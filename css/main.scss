@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Permanent+Marker");
-$colors: (
-  primary: rgba(75, 172, 112, 1),
-  primary-light: lighten(rgba(75, 172, 112, 1), 10%),
-  primary-dark: darken(rgba(75, 172, 112, 1), 10%)
-);
+$colors: ( primary: rgba(75, 172, 112, 1),
+primary-light: lighten(rgba(75, 172, 112, 1), 10%),
+primary-dark: darken(rgba(75, 172, 112, 1), 10%));
 $padding: 15px;
 $borders: 15px;
 @function color($color-name) {
-  @return map-get($colors, $color-name);
+  @return map-get($colors,
+  $color-name);
 }
 
 $phone: 576px;
@@ -52,8 +51,7 @@ body {
   left: 0;
   z-index: -1;
   clip-path: polygon(0% 100%, 100% 58%, 100% 58%, 100% 100%, 16% 100%);
-  @include tablet {
-  }
+  @include tablet {}
   @include desktop {
     background-color: white;
     clip-path: circle(60% at 100% 50%);
@@ -68,7 +66,7 @@ body {
     .b,
     .a {
       //transform: translate(35px, 5px);
-      animation: 0.7s shake linear 1s both;
+      animation: 0.4s shake linear 1s both 2;
     }
   }
   .bone {
@@ -614,8 +612,7 @@ body {
   }
   #clickedImg {
     max-width: 100%;
-    @include tablet {
-    }
+    @include tablet {}
     img {
       width: 100%;
       margin: 0;

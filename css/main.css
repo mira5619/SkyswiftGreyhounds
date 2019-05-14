@@ -50,8 +50,8 @@ body {
 #bg .doggy .e,
 #bg .doggy .b,
 #bg .doggy .a {
-  -webkit-animation: 0.7s shake linear 1s both;
-          animation: 0.7s shake linear 1s both;
+  -webkit-animation: 0.4s shake linear 1s both 2;
+          animation: 0.4s shake linear 1s both 2;
 }
 
 #bg .bone {
