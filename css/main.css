@@ -50,8 +50,8 @@ body {
 #bg .doggy .e,
 #bg .doggy .b,
 #bg .doggy .a {
-  -webkit-animation: 0.4s shake linear 1s both 2;
-          animation: 0.4s shake linear 1s both 2;
+  -webkit-animation: 0.3s shake linear 1s both 2;
+          animation: 0.3s shake linear 1s both 2;
 }
 
 #bg .bone {
@@ -784,23 +784,23 @@ body {
 
 @-webkit-keyframes shake {
   0% {
-    -webkit-transform: translate(35px, 5px);
-            transform: translate(35px, 5px);
+    -webkit-transform: translate(15px, 5px);
+            transform: translate(15px, 5px);
   }
   100% {
-    -webkit-transform: translate(5px, 15px);
-            transform: translate(5px, 15px);
+    -webkit-transform: translate(5px, 25px);
+            transform: translate(5px, 25px);
   }
 }
 
 @keyframes shake {
   0% {
-    -webkit-transform: translate(35px, 5px);
-            transform: translate(35px, 5px);
+    -webkit-transform: translate(15px, 5px);
+            transform: translate(15px, 5px);
   }
   100% {
-    -webkit-transform: translate(5px, 15px);
-            transform: translate(5px, 15px);
+    -webkit-transform: translate(5px, 25px);
+            transform: translate(5px, 25px);
   }
 }
 
