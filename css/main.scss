@@ -66,8 +66,14 @@ body {
         .b,
         .a {
             //transform: translate(35px, 5px);
-            animation: 0.3s shake linear 1s both 2;
+            animation: 0.3s shake linear 1s both 5;
         }
+    }
+    .doggy1 {
+        animation: 0.7s walk linear 1s both;
+    }
+    .doggy2 {
+        animation: 0.7s walk-out linear 1s both;
     }
     .bone {
         width: 30px;
@@ -580,6 +586,34 @@ body {
     }
     100% {
         transform: translate(5px, 25px); //top: 0px;
+    }
+}
+
+@keyframes walk {
+    0% {
+        transform: translate(-350px, 5px);
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        transform: translate(5px, 5px);
+        opacity: 1;
+    }
+}
+
+@keyframes walk-out {
+    0% {
+        transform: translate(5px, 5px);
+        opacity: 1;
+    }
+    20% {
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-350px, 5px);
+        opacity: 0;
     }
 }
 
