@@ -934,7 +934,7 @@ body {
       align-content: space-between;
   /* Your container needs a fixed height, and it
      * needs to be taller than your tallest column. */
-  height: 2950px;
+  height: 3200px;
   /* Optional */
   background-color: #f7f7f7;
   border-radius: 3px;
